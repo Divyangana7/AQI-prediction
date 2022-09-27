@@ -98,33 +98,33 @@ The primary idea behind Logistic regression is to establish a relationship betwe
 
 *Binary classification:* This involves predicting if the sample falls into class 0 or 1. For example, an email is a spam or ham. The sigmoid function is used to calculate values for logistic regression involving two classes. Sigmoid pushes the input values to fall within the range [0,1].
 
-<img width="202" alt="image" src="Image_15.png">
+<img width="202" alt="Image_15" src="https://user-images.githubusercontent.com/48348114/192596434-7b9cc774-8344-4488-9e6f-b1331c41cf94.png">
 
 *Multiclass logistic regression:* It is used to classify records into more than two classes. A SoftMax function is used to calculate the probabilities. For a given sample we calculate the probability of it belonging to each of the n classes. The sum of all probabilities for each sample should add up to 1. We classify a record belonging to a particular class by selecting the one with the highest probability.
 For our dataset, we have engineered a new column called AQI_encoded by using the below logic. This helps us to fit the data into a multinomial Logistic Regression model. The target classes are one-hot encoded before calculating the probabilities.
 
-<img width="433" alt="image" src="Image_16.png">
+<img width="433" alt="Image_16" src="https://user-images.githubusercontent.com/48348114/192596443-88caf224-a758-4389-8f0b-3e551f1fe5fd.png">
 
 ##### Results:
 
-<img width="563" alt="image" src="Image_17.png">
+<img width="563" alt="Image_17" src="https://user-images.githubusercontent.com/48348114/192596449-15baf0c9-f27b-42ba-aa18-847dac05b54e.png">
 
-<img width="499" alt="image" src="Image_18.png">
+<img width="499" alt="Image_18" src="https://user-images.githubusercontent.com/48348114/192596473-347b9fc3-31ad-4835-92bc-7d402b3da53f.png">
 
 #### III.III. Naive Bayes:
 The core of a Naive Bayes model is prediction, diagnosis and reasoning. Variables generated randomly are represented by nodes and conditional probability is the information between these nodes. We combine conditional probability with prior probability to obtain a posteriori probability in order to achieve the effect of prediction. It is a simple model widely used due to its speed and faster learning rate. Bayes theorem helps us calculate the Probability of A happening provided B has occurred with the assumption of independence.
 
-<img width="486" alt="image" src="Image_19.png">
+<img width="486" alt="Image_19" src="https://user-images.githubusercontent.com/48348114/192596597-daa24d71-f0e2-4664-8e48-835e71d4e0cc.png">
 
 *The following formula is used for calculate probability:*
 
-<img width="331" alt="image" src="Image_20.png">
+<img width="331" alt="Image_20" src="https://user-images.githubusercontent.com/48348114/192596604-68576b60-ca65-4238-92ad-c42705b68e08.png">
 
 The Probability of event Bi occurring such that event A has occurred is given by the above formulae.
  
 The Gaussian Naive Bayes functions are typically derived from probabilities of the lower-order estimates from the training data. These may easily be updated as new training data come in. Because you just need to estimate the mean and standard deviation from your training data, the Gaussian (or Normal) distribution is the simplest to deal with. The assumption that the continuous values associated with each class are distributed according to a normal (or Gaussian) distribution is frequently made when working with continuous data. The characteristics and likelihood is predicated on:
 
-<img width="245" alt="image" src="Image_21.png">
+<img width="245" alt="Image_21" src="https://user-images.githubusercontent.com/48348114/192596610-5dd3d655-2df6-4624-b88b-65354b2bbf27.png">
 
 Assuming variance is,
 • is independent of Y (i.e., σi),
@@ -133,18 +133,16 @@ Assuming variance is,
 
 The AQI classification categories were encoded into the below values in order to classify our predictions:
 
-<img width="440" alt="image" src="Image_22.png">
+<img width="440" alt="Image_22" src="https://user-images.githubusercontent.com/48348114/192596926-b7130d17-0253-4dcc-9118-97373af1e3a1.png">
 
 ##### Results:
 Below are the results obtained by applying batch size to data split while running the model:
 
-<img width="561" alt="image" src="Image_23.png">
+<img width="561" alt="Image_23" src="https://user-images.githubusercontent.com/48348114/192596703-83caa655-c04c-425b-a592-3e01e1a9ccd0.png">
 
+<img width="613" alt="Image_24" src="https://user-images.githubusercontent.com/48348114/192596977-47e52177-5a85-4a6a-ab87-10300d37bd72.png">
 
-<img width="613" alt="image" src="Image_24.png">
-
-
-<img width="570" alt="image" src="Image_25.png">
+<img width="570" alt="Image_25" src="https://user-images.githubusercontent.com/48348114/192597027-407602fa-85b1-4055-bb20-847e576ad6aa.png">
 
 ### V. Conclusion:
 The air quality prediction model based on machine learning is used to predict the air quality in Beijing. The aim of the project was to research and study the various Machine Learning models available in order to implement the best fit for our dataset. As a team, we had the opportunity to clean the data, observe the importance of pollutants and their impact on the quality of air and implement ML algorithms to predict the AQI and observe how the predicted value differs from the original value. The following factors are used for the evaluation of the model, Temp, Pressure, SO2, NO2, O3, CO, PM10 and PM2.5 and the calculated AQI value is used as the target. The model is trained and verified by using the historical data on air quality to obtain comprehensive accuracy. The results show that the Linear Regression model predicted the air quality with a 68% accuracy, followed by Logistic Regression at 46.78% and Naive Bayes at 43.29%. In addition, wind, precipitation and other environmental conditions also play a factor that directly affects the quality of air. Therefore, taking these factors would help further improve the accuracy of our models and is one of the future research directions.
